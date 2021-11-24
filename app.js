@@ -11,7 +11,9 @@ async function getQuote(event) {
     const data = await response.json();
 //console.log(data);
 //Bouns Bouns Task
-    datasetInh1.innerHTML = `<h1>${data.quote}</h1>`;
+        if (arrayQuote.includes(data.quote) === false){
+            datasetInh1.innerHTML = `<h1>${data.quote}</h1>`;
+        }
 
 //Task 3
 //&
